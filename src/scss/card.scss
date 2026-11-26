@@ -1,0 +1,73 @@
+
+@use './main' as *;
+
+.card-link {
+    text-decoration: none;
+    color: var(--secondary-background);
+}
+
+.home-card {
+    background-color: var(--primary-background);
+    border-radius: 10px 10px 0px 10px;
+    box-shadow: 5px 5px var(--secondary-background);
+    border: 3px solid var(--secondary-background);
+    transition: 0.25s ease;
+    position: relative;
+
+    flex-grow: 1;
+    min-width: 0;
+    flex-basis: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.card-content a[href] {
+    position: relative;
+    z-index: 2;
+}
+
+.home-card h1 {
+    color: var(--secondary-background);
+    font-size: 1.5rem;
+}
+
+.card-top .external-link-icon {
+    height: 2em;
+    width: 2em;
+    align-self: center;
+    color: var(--secondary-background);
+    margin-right: 1em;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin: 0;
+    padding: 0.5em;
+    padding-bottom: 0;
+    border-bottom: 4px solid var(--secondary-background);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-content {
+    margin: 0 0.5em;
+    margin-bottom: 2em;
+}
+
+.home-card:hover {
+    box-shadow: none;
+    transform: translate(5px, 5px);
+}
+
+.card-holder {
+    display: grid;
+}

@@ -1,0 +1,41 @@
+.experience-page {
+    margin: 2em auto;
+    max-width: 1000px;
+    width: calc(100% - 4em);
+}
+
+.experience-page .home-card {
+    width: 100%;
+    margin: 0;
+}
+
+.experience-page .home-card:hover {
+    box-shadow: 5px 5px var(--secondary-background);
+    transform: none;
+}
+
+.experience-page .home-card h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 3px solid var(--secondary-background);
+}
+
+.experience-page a{
+    display: inline-block;
+    border: 3px solid var(--secondary-background);
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.2em 1em;
+    box-shadow: 2px 2px var(--secondary-background);
+    transition: ease 500ms;
+    text-decoration: none;
+    color: var(--secondary-background);
+    margin: 0.5em 0.2em;
+}
+
+.experience-page a:hover{
+    transform: translate(2px, 2px);
+    box-shadow: none;
+    color: var(--highlight-colour);
+    border-color: var(--highlight-colour);
+}

@@ -1,0 +1,195 @@
+@use './main';
+
+.home-page {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+        "welcome welcome theme"
+        "welcome welcome what-i-use"
+        "projects experience what-i-use"
+        "blog contact what-i-use"
+        "site-info site-info site-info";
+
+    gap: 1.5em;
+    margin: 3em 5em;
+
+    .welcome {
+        grid-area: welcome;
+    }
+
+    .projects {
+        grid-area: projects;
+    }
+
+    .experience {
+        grid-area: experience;
+    }
+
+    .experience h3 {
+        border-bottom: 3px solid var(--secondary-background);
+        margin-bottom: 0.55em;
+    }
+
+    .experience h4 {
+        margin: 0;
+    }
+
+    .experience p {
+        margin: 0 0 1em;
+    }
+
+    .blog {
+        grid-area: blog;
+    }
+
+    .contact {
+        grid-area: contact;
+    }
+
+    .theme {
+        grid-area: theme;
+    }
+
+    .theme-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4em;
+    }
+
+    .theme-option {
+        background-color: var(--primary-background);
+        border: 3px solid var(--secondary-background);
+        border-radius: 15px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.2em 1em;
+        box-shadow: 2px 2px var(--secondary-background);
+        transition: ease 500ms;
+        text-decoration: none;
+        color: var(--secondary-background);
+        margin: 1em;
+        cursor: pointer;
+    }
+
+    .theme-option:hover {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+        color: var(--highlight-colour);
+        border-color: var(--highlight-colour);
+    }
+
+    .what-i-use {
+        grid-area: what-i-use;
+    }
+
+    .what-i-use .card-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0.5em 0.1em;
+    }
+
+    .what-i-use .subsection {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .what-i-use h3,
+    .projects h3 {
+        margin-bottom: 0.5em;
+        border-bottom: 3px solid var(--secondary-background);
+        padding-bottom: 0.5em;
+    }
+
+    .site-info {
+        grid-area: site-info;
+        align-self: self-start;
+    }
+
+    .site-info .card-content {
+        margin: 1em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .projects a {
+        text-decoration: none;
+        color: var(--secondary-background);
+        transition: 0.5s ease;
+    }
+
+    .projects a div{
+        border-left: 3px solid var(--secondary-background);
+        padding-left: 0.5em;
+        margin-left: 0em;
+    }
+
+    .projects a h4 {
+        margin-top: 1em;
+        margin-bottom: 0em;
+    }
+
+    .projects a p {
+        margin-top: 0.2em;
+        margin-bottom: 1em;
+    }
+    .projects a:hover {
+        color: var(--highlight-colour);
+    }
+
+    .projects a:hover div {
+        border-color: var(--highlight-colour);
+        margin-left: 0.5em;
+    }
+
+    .what-i-use a {
+        border: 3px solid var(--secondary-background);
+        border-radius: 15px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.2em 1em;
+        box-shadow: 2px 2px var(--secondary-background);
+        transition: ease 500ms;
+        text-decoration: none;
+        color: var(--secondary-background);
+        margin: 0.2em;
+    }
+
+    .what-i-use a:hover {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+        color: var(--highlight-colour);
+        border-color: var(--highlight-colour);
+    }
+
+    .contact-me a {
+        display: inline-block;
+        border: 3px solid var(--secondary-background);
+        border-radius: 15px;
+        font-weight: 600;
+        text-align: center;
+        padding: 0.2em 1em;
+        box-shadow: 2px 2px var(--secondary-background);
+        transition: ease 500ms;
+        text-decoration: none;
+        color: var(--secondary-background);
+        margin: 0.5em 0.2em;
+    }
+
+    .contact-me a:hover {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+        color: var(--highlight-colour);
+        border-color: var(--highlight-colour);
+    }
+
+    @media (max-width: 900px) {
+        display: inline-block;
+        margin: 1.5em;
+
+        .home-card {
+            margin-bottom: 1em;
+        }
+    }
+}
